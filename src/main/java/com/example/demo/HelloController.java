@@ -1,19 +1,27 @@
 package com.example.demo;
 
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Scene;
 import javafx.scene.control.Label;
+import javafx.scene.control.TextArea;
+import javafx.stage.Stage;
 
+import java.io.IOException;
 import java.sql.*;
 
 public class HelloController {
+
     @FXML
     private Label welcomeText;
+
+    @FXML
+    private TextArea tArea;
 
     @FXML
     protected void onHelloButtonClick() {
 
         //System.out.println("ок");
-
 
         try
         {
@@ -34,6 +42,9 @@ public class HelloController {
                 //String phone = resset.getString("phone");
 
                 System.out.println("name: " + name);
+
+                this.tArea.appendText("\n" + name);
+
             }
 
 

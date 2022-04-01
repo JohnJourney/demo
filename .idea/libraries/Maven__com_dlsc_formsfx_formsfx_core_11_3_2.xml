@@ -2,7 +2,7 @@
   <library name="Maven: com.dlsc.formsfx:formsfx-core:11.3.2">
     <CLASSES>
       <root url="jar://$MAVEN_REPOSITORY$/com/dlsc/formsfx/formsfx-core/11.3.2/formsfx-core-11.3.2.jar!/" />
-      <root url="file://$USER_HOME$/Downloads/sqlite-jdbc-3.7.2.jar" />
+      <root url="jar://$PROJECT_DIR$/../sqlite-jdbc-3.7.2.jar!/" />
     </CLASSES>
     <JAVADOC>
       <root url="jar://$MAVEN_REPOSITORY$/com/dlsc/formsfx/formsfx-core/11.3.2/formsfx-core-11.3.2-javadoc.jar!/" />
@@ -10,8 +10,8 @@
     <SOURCES>
       <root url="jar://$MAVEN_REPOSITORY$/com/dlsc/formsfx/formsfx-core/11.3.2/formsfx-core-11.3.2-sources.jar!/" />
       <root url="file://$USER_HOME$/Downloads/sqlite-jdbc-3.7.2.jar" />
+      <root url="jar://$PROJECT_DIR$/../sqlite-jdbc-3.7.2.jar!/" />
     </SOURCES>
-    <jarDirectory url="file://$USER_HOME$/Downloads/sqlite-jdbc-3.7.2.jar" recursive="false" />
     <jarDirectory url="file://$USER_HOME$/Downloads/sqlite-jdbc-3.7.2.jar" recursive="false" type="SOURCES" />
   </library>
 </component>
