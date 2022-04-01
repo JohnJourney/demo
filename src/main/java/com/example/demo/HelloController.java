@@ -1,14 +1,20 @@
 package com.example.demo;
 
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
-import javafx.fxml.FXMLLoader;
-import javafx.scene.Scene;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextArea;
-import javafx.stage.Stage;
+import javafx.scene.control.TableView;
+import javafx.scene.control.TableRow;
+import javafx.scene.control.TableColumn;
 
-import java.io.IOException;
+
 import java.sql.*;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 
 public class HelloController {
 
@@ -19,9 +25,16 @@ public class HelloController {
     private TextArea tArea;
 
     @FXML
-    protected void onHelloButtonClick() {
+    private TableView fxTable;
 
-        //System.out.println("ок");
+    @FXML
+    private TableRow tRow;
+
+    @FXML
+    private TableColumn fxColumn1;
+
+    @FXML
+    protected void onHelloButtonClick() {
 
         try
         {
@@ -36,6 +49,13 @@ public class HelloController {
             System.out.println("Query sucessful!" + "\n");
 
 
+
+
+            //ObservableList<Map<String, Object>> items = FXCollections.<Map<String, Object>>observableArrayList();
+            List<String> firstItems = new ArrayList<>();
+
+
+
             while (resset.next())
             {
                 String name = resset.getString("name");
@@ -45,7 +65,39 @@ public class HelloController {
 
                 this.tArea.appendText("\n" + name);
 
+                //tableRow = new TableRow<>();
+                //this.fxTable.getItems().add(name);
+
+
+                //Map<String, Object> item1 = new HashMap();
+                //item1.put("fxColumn1", name);
+
+                //items.add(item1);
+
+
+
+
+                firstItems.add(name);
+
+
+
+
+
+
+
             }
+
+
+            //fxTable.getItems().addAll(items);
+            fxTable.setItems(FXCollections.observableArrayList(firstItems));
+
+
+
+
+
+
+
+
 
 
         } catch (SQLException e) {

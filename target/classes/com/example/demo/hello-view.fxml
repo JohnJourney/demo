@@ -11,9 +11,9 @@
 
     <Label fx:id="welcomeText" accessibleRole="CHECK_BOX" alignment="TOP_LEFT" text="Работа с базой SQLite" />
     <Button onAction="#onHelloButtonClick" text="Получить данные из базы" />
-   <TableView prefHeight="200.0" prefWidth="200.0">
+   <TableView fx:id="fxTable" editable="true" prefHeight="200.0" prefWidth="200.0" tableMenuButtonVisible="true">
      <columns>
-       <TableColumn prefWidth="75.0" text="C1" />
+       <TableColumn fx:id="fxColumn1" prefWidth="75.0" text="C1" />
        <TableColumn prefWidth="75.0" text="C2" />
      </columns>
    </TableView>
